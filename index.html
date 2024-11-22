@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador de Lesiones Dermatológicas</title>
+    
+    <!-- Librerías externas -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.18.0"></script>
+    
+    <!-- Tus archivos CSS -->
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/skin.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/w3.css">
+</head>
+<body id="sticky_footer-body">
+    <div id="encabezado">
+        <div class="cajon">
+            <div id="herramientas">
+                <div id="block-search-0" class="clear-block block block-search">
+                    <div class="content">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="micrositios">
+                <div class="w3-padding">
+                    <div id="block-menu-primary-links" class="clear-block block block-menu">
+                        <div class="content">
+                            <h4>Carlos Cortez</h4>
+                            <a href="index.html" title="Ir a la página principal">
+                                <img id="logo" src="img/logotipo.png" style="float:none;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-content card" style="max-width:960px">
+        <div id="home" class="tabbed w3-animate-opacity w3-white">
+            <div class="w3-center title adjust-fontcolor logo">
+                <div class="w3-center">
+                    <img src="assets/logoinub.jpg" class="w3-round adjust-image" width="150">
+                </div>
+
+                <h1 class="space-letters w3-text-black">ANALIZADOR DE LESIONES DERMATOLÓGICAS</h1>
+                <h3 class="space-letters w3-text-blue-grey">Analizador de imágenes en línea de los tres diagnósticos más probables para una lesión en la piel:</h3>
+            </div>
+
+            <div class="w3-center">
+                <input id="image-selector" class="w3-button w3-blue w3-round" type="file" accept="image/*">
+            </div>
+
+            <div class="w3-center">
+                <img id="selected-image" src="assets/samplepic.jpg" class="w3-round adjust-image">
+            </div>
+
+            <div class="w3-center">
+                <div class="progress-bar">
+                    <div class="w3-text-blue">Modelo con Inteligencia Artificial cargando...</div>
+                </div>
+            </div>
+
+            <div class="w3-center add-padding w3-border add-margin side-margin w3-round w3-pale-blue">
+                <h5 class="new-font">Resultados:</h5>
+                <ul id="prediction-list" class="w3-ul"></ul>
+            </div>
+
+            <div class="w3-center bottom-padding">
+                <button id="predict-button" class="w3-button w3-blue w3-round">Analizar Imagen</button>
+            </div>
+
+            <div class="w3-padding">
+                <h5 class="space-letters tag-font w3-text-black">Características técnicas del Modelo:</h5>
+                <h5 class="space-letters tag-font w3-text-indigo">- Exactitud: 0.89</h5>
+                <h5 class="space-letters tag-font w3-text-indigo">- Recall: 0.88</h5>
+                <h5 class="space-letters tag-font w3-text-indigo">- Sensibilidad: 0.88</h5>
+                <h6 class="space-letters tag-font w3-text-indigo">El entrenamiento del modelo está basado en el conjunto de 10015 imágenes dermatoscópicas de Harvard, entrenado con Tensorflow</h6>
+            </div>
+
+            <div class="w3-padding">
+                <h5 class="space-letters tag-font w3-text-black">Realizado por:</h5>
+                <h5 class="space-letters tag-font w3-text-teal">Carlos Cortez</h5>
+                <h5 class="space-letters tag-font w3-text-teal">ccortez@unbosque.edu.co</h5>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="jscript/target_classes.js"></script>
+    <script src="jscript/predict100.js"></script>
+</body>
+</html>
